@@ -1,0 +1,30 @@
+╔════════════════════════════════════════════════════════════════╗
+║   GitHub Setup Instructions (Инструкция по созданию на GitHub)  ║
+╚════════════════════════════════════════════════════════════════╝
+
+ШАГИ / STEPS:
+
+1️⃣  Создайте пустой репозиторий на GitHub:
+   • Перейти на https://github.com/new
+   • Repository name: blackautoservice
+   • Description: Black Auto Service Chișinău - Car repair & painting
+   • Выбрать "Public"
+   • Нажать "Create repository"
+
+2️⃣  Выполнить ЭТИ КОМАНДЫ в PowerShell:
+
+   git remote add origin https://github.com/YOUR_USERNAME/blackautoservice.git
+   git branch -M main
+   git push -u origin main
+
+   (Замените YOUR_USERNAME на ваше имя пользователя GitHub)
+
+3️⃣  После первого push, для автоматических обновлений используйте:
+
+   git add -A
+   git commit -m "ваше сообщение"
+   git push
+
+═══════════════════════════════════════════════════════════════════
+
+Если нужна помощь, откройте этот файл и следуйте инструкциям!
