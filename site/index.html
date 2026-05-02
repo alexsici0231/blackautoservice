@@ -46,6 +46,18 @@ section{padding:96px 0}
 .br{background:var(--red);color:#fff}.br:hover{background:var(--red2);transform:translateY(-2px)}
 .bg{background:transparent;color:var(--white);border:1.5px solid var(--bdr)}.bg:hover{border-color:var(--white)}
 
+.btn-sm{font-size:14px}
+.section-footer{text-align:center;margin-top:36px}
+.footer-desc{margin-top:3px}
+.cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#111;border-top:1px solid #2a2a2a;padding:16px 5%;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.cookie-text{font-size:13px;color:#999;max-width:680px;line-height:1.55}
+.cookie-text .cookie-link{color:#C8102E}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0}
+.cookie-btn{border:none;padding:10px 22px;border-radius:7px;font-weight:700;font-size:13px;cursor:pointer}
+.cookie-btn-primary{background:#C8102E;color:#fff}
+.cookie-btn-secondary{background:transparent;color:#999;border:1px solid #333;padding:10px 18px}
+.cookie-more{color:#666;font-size:12px;display:flex;align-items:center;padding:0 6px}
+
 
 /* HERO 2-COL */
 .hero{position:relative;min-height:100vh;padding-top:var(--nh);display:flex;align-items:center;overflow:hidden}
@@ -57,7 +69,6 @@ section{padding:96px 0}
 
 
 
-.hero-car-col:hover 
 @media(max-width:900px){.hero-wrap{grid-template-columns:1fr}}
 
 /* STATS COUNTER SECTION */
@@ -74,7 +85,7 @@ section{padding:96px 0}
 @media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2n){border-right:none}.stat-item:nth-child(n+3){border-top:1px solid var(--bdr)}.stat-item:last-child{grid-column:1/-1}}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
 .nb{font-family:var(--fh);font-size:20px;letter-spacing:.06em;white-space:nowrap}.nb span{color:var(--red)}
 .nl{display:flex;gap:28px;align-items:center}
 .nl a{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);transition:color var(--t)}.nl a:hover{color:var(--white)}
@@ -571,7 +582,7 @@ body.ro [data-ro]{display:block}
     <div class="mg">
       <div class="rv">
         <div class="mw">
-          <iframe src="https://maps.google.com/maps?q=str.+Varnita+2%2F3,+Chisinau,+Moldova&output=embed&z=16&hl=ru" title="Black Auto Service вЂ” str. VarniИ›a 2/3, ChiИ™inДѓu" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=str.+Varnita+2%2F3,+Chisinau,+Moldova&output=embed&z=16&hl=ru" title="Black Auto Service вЂ” str. VarniИ›a 2/3, ChiИ™inДѓu" allowfullscreen loading="lazy"></iframe>
         </div>
         <a href="https://www.google.com/maps/dir/?api=1&destination=str.+VarniИ›a+2%2F3,+ChiИ™inДѓu,+Moldova" target="_blank" rel="noopener" class="db">
           <i class="fas fa-route"></i>
@@ -599,8 +610,8 @@ body.ro [data-ro]{display:block}
               <div class="fg"><label data-ru>РўРµР»РµС„РѕРЅ</label><label data-ro>Telefon</label><input type="tel" required placeholder="068 ..."></div>
             </div>
             <div class="fg">
-              <label data-ru>РЈСЃР»СѓРіР°</label><label data-ro>Serviciul</label>
-              <select>
+              <label data-ru for="service">РЈСЃР»СѓРіР°</label><label data-ro for="service">Serviciul</label>
+              <select id="service" name="service">
                 <option data-ru>Р РµРјРѕРЅС‚ РєСѓР·РѕРІР° / Tinichigerie</option><option data-ro>ReparaИ›ie caroserie / Tinichigerie</option>
                 <option data-ru>РџРѕРєСЂР°СЃРєР° Р°РІС‚Рѕ / Vopsire</option><option data-ro>Vopsire auto</option>
                 <option data-ru>Р—Р°РјРµРЅР° СЂРµРјРЅСЏ Р“Р Рњ</option><option data-ro>Schimbare curea distribuИ›ie</option>
@@ -681,8 +692,8 @@ body.ro [data-ro]{display:block}
         </div>
       </a>
     </div>
-    <div style="text-align:center;margin-top:36px">
-      <a href="blog.html" class="btn bg" style="font-size:14px">
+    <div class="section-footer">
+      <a href="blog.html" class="btn bg btn-sm">
         <span data-ru>Р’СЃРµ СЃС‚Р°С‚СЊРё Р±Р»РѕРіР° в†’</span><span data-ro>Toate articolele в†’</span>
       </a>
     </div>
@@ -695,8 +706,8 @@ body.ro [data-ro]{display:block}
       <div>
         <div class="fbn">BLACK <span>AUTO</span>SERVICE</div>
         <div class="fc">В© 2025 Black Auto Service В· str. VarniИ›a 2/3, ChiИ™inДѓu В· вЋ 068 078 078</div>
-        <div class="fc" data-ru style="margin-top:3px">Р РµРјРѕРЅС‚ РєСѓР·РѕРІР°, РїРѕРєСЂР°СЃРєР° Р°РІС‚Рѕ, Р¶РµСЃС‚СЏРЅС‹Рµ СЂР°Р±РѕС‚С‹ РІ РљРёС€РёРЅС‘РІРµ</div>
-        <div class="fc" data-ro style="margin-top:3px">Vopsire auto, tinichigerie, reparaИ›ie caroserie Г®n ChiИ™inДѓu</div>
+        <div class="fc footer-desc" data-ru>Р РµРјРѕРЅС‚ РєСѓР·РѕРІР°, РїРѕРєСЂР°СЃРєР° Р°РІС‚Рѕ, Р¶РµСЃС‚СЏРЅС‹Рµ СЂР°Р±РѕС‚С‹ РІ РљРёС€РёРЅС‘РІРµ</div>
+        <div class="fc footer-desc" data-ro>Vopsire auto, tinichigerie, reparaИ›ie caroserie Г®n ChiИ™inДѓu</div>
       </div>
       <div class="fl">
         <a href="#services" data-ru>РЈСЃР»СѓРіРё</a><a href="#services" data-ro>Servicii</a>
@@ -772,12 +783,12 @@ if (statsEl) statsObs.observe(statsEl);
 </script>
 
 <!-- COOKIE BANNER -->
-<div id="ckb" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#111;border-top:1px solid #2a2a2a;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
-  <p style="font-size:13px;color:#999;max-width:680px;line-height:1.55">рџЌЄ РњС‹ РёСЃРїРѕР»СЊР·СѓРµРј С„Р°Р№Р»С‹ cookie РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё Рё РѕРїС‚РёРјРёР·Р°С†РёРё СЂРµРєР»Р°РјС‹. РџСЂРѕРґРѕР»Р¶Р°СЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃР°Р№С‚, РІС‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ СЃ РЅР°С€РµР№ <a href="cookies.html" style="color:#C8102E">РџРѕР»РёС‚РёРєРѕР№ Cookie</a> Рё <a href="privacy.html" style="color:#C8102E">РџРѕР»РёС‚РёРєРѕР№ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>.</p>
-  <div style="display:flex;gap:10px;flex-shrink:0">
-    <button onclick="ckAccept()" style="background:#C8102E;color:#fff;border:none;padding:10px 22px;border-radius:7px;font-weight:700;font-size:13px;cursor:pointer">РџСЂРёРЅСЏС‚СЊ</button>
-    <button onclick="ckDecline()" style="background:transparent;color:#999;border:1px solid #333;padding:10px 18px;border-radius:7px;font-size:13px;cursor:pointer">РўРѕР»СЊРєРѕ РЅРµРѕР±С…РѕРґРёРјС‹Рµ</button>
-    <a href="cookies.html" style="color:#666;font-size:12px;display:flex;align-items:center;padding:0 6px">РџРѕРґСЂРѕР±РЅРµРµ</a>
+<div id="ckb" class="cookie-banner">
+  <p class="cookie-text">рџЌЄ РњС‹ РёСЃРїРѕР»СЊР·СѓРµРј С„Р°Р№Р»С‹ cookie РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё Рё РѕРїС‚РёРјРёР·Р°С†РёРё СЂРµРєР»Р°РјС‹. РџСЂРѕРґРѕР»Р¶Р°СЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃР°Р№С‚, РІС‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ СЃ РЅР°С€РµР№ <a href="cookies.html" class="cookie-link">РџРѕР»РёС‚РёРєРѕР№ Cookie</a> Рё <a href="privacy.html" class="cookie-link">РџРѕР»РёС‚РёРєРѕР№ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>.</p>
+  <div class="cookie-actions">
+    <button onclick="ckAccept()" class="cookie-btn cookie-btn-primary">РџСЂРёРЅСЏС‚СЊ</button>
+    <button onclick="ckDecline()" class="cookie-btn cookie-btn-secondary">РўРѕР»СЊРєРѕ РЅРµРѕР±С…РѕРґРёРјС‹Рµ</button>
+    <a href="cookies.html" class="cookie-more">РџРѕРґСЂРѕР±РЅРµРµ</a>
   </div>
 </div>
 <script>
