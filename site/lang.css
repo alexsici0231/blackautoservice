@@ -1,0 +1,7 @@
+[data-ro]{display:none}
+body.ro [data-ro]{display:unset}
+body.ro [data-ru]{display:none}
+.lb{display:flex;gap:8px}
+.lb button{border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--white);padding:9px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;transition:all .2s}
+.lb button.on{background:var(--red);border-color:var(--red);color:#fff}
+.lb button:focus-visible{outline:2px solid rgba(200,16,46,.65);outline-offset:3px}

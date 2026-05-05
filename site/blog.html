@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://blackautoservice.md/blog.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lang.css">
 <style>
 :root{--bg:#080808;--bg2:#101010;--bg3:#161616;--bdr:#232323;--red:#C8102E;--red2:#a50d25;--white:#f5f5f5;--gray:#999;--gray2:#555;--fh:'Bebas Neue',sans-serif;--fb:'Inter',sans-serif;--nh:70px;--r:10px;--t:.22s ease}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -15,7 +16,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1
 a{color:inherit;text-decoration:none}button{cursor:pointer;font-family:var(--fb)}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--red)}
 .con{max-width:1180px;margin:0 auto;padding:0 5%}
-nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
 .nb{font-family:var(--fh);font-size:20px;letter-spacing:.06em}.nb span{color:var(--red)}
 .nl{display:flex;gap:28px}.nl a{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);transition:color .2s}.nl a:hover{color:var(--white)}
 .nr{display:flex;gap:14px;align-items:center}
@@ -42,6 +43,10 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
     <a href="index.html#map">Контакты / Contacte</a>
   </div>
   <div class="nr">
+    <div class="lb">
+      <button class="on" onclick="setLang('ru')" type="button">RU</button>
+      <button onclick="setLang('ro')" type="button">RO</button>
+    </div>
     <a href="tel:+37368078078" class="nc">📞 068 078 078</a>
     <button class="bb" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -50,151 +55,151 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
   <a href="index.html#services" onclick="document.getElementById('mm').classList.remove('open')">Услуги / Servicii</a>
   <a href="blog.html" onclick="document.getElementById('mm').classList.remove('open')">Блог / Blog</a>
   <a href="index.html#map" onclick="document.getElementById('mm').classList.remove('open')">Контакты / Contacte</a>
-  <a href="tel:+37368078078" style="color:var(--red);font-size:28px">068 078 078</a>
+  <a href="tel:+37368078078" class="mobile-phone">068 078 078</a>
 </div>
-<main style="padding:60px 0 20px">
+<main class="blog-main">
   <div class="con">
-    <div style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:12px">Блог</div>
-    <h1 style="font-family:var(--fh);font-size:clamp(40px,6vw,72px);line-height:1.05;margin-bottom:14px">Полезные статьи</h1>
-    <p style="font-size:16px;color:var(--gray);max-width:560px;margin-bottom:52px;line-height:1.7">Советы по обслуживанию, разбор поломок и ответы на популярные вопросы от мастеров Black Auto Service.</p>
+    <div class="section-label">Блог</div>
+    <h1 class="page-title"><span data-ru>Полезные статьи</span><span data-ro>Articole utile</span></h1>
+    <p class="page-description"><span data-ru>Советы по обслуживанию, разбор поломок и ответы на популярные вопросы от мастеров Black Auto Service.</span><span data-ro>Sfaturi de întreținere, analiza defecțiunilor și răspunsuri la întrebările frecvente de la specialiștii Black Auto Service.</span></p>
     <div class="blog-grid">
-      <a href="blog/kogda-menyat-remen-grm.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a0a0e,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">⚙️</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Двигатель / Motor</div>
+      <a href="blog/kogda-menyat-remen-grm.html" class="blog-card">
+        <div class="blog-card-head grad-1">
+          <span class="card-icon">⚙️</span>
+          <div class="card-label">Двигатель / Motor</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Когда нужно менять ремень ГРМ?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Последствия обрыва ремня ГРМ катастрофические — капремонт двигателя. Рассказываем о пробеге, признаках износа и цене замены в Кишинёве.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 7 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Когда нужно менять ремень ГРМ?</span><span data-ro>Când se schimbă cureaua de distribuție?</span></h2>
+          <p class="card-desc"><span data-ru>Последствия обрыва ремня ГРМ катастрофические — капремонт двигателя. Рассказываем о пробеге, признаках износа и цене замены в Кишинёве.</span><span data-ro>Consecințele rupturii curelei de distribuție sunt catastrofale — revizie majoră a motorului. Vorbim despre kilometraj, semnele uzurii și costul schimbului în Chișinău.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 7 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/zamena-stsepleniya.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#0a0f1a,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🔩</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Трансмиссия / Transmisie</div>
+      <a href="blog/zamena-stsepleniya.html" class="blog-card">
+        <div class="blog-card-head grad-2">
+          <span class="card-icon">🔩</span>
+          <div class="card-label">Трансмиссия / Transmisie</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">5 признаков износа сцепления</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Пробуксовка, рывки при трогании, запах горелого — разбираем симптомы и объясняем, когда пора в сервис.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 5 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>5 признаков износа сцепления</span><span data-ro>5 semne că ambreajul se uzează</span></h2>
+          <p class="card-desc"><span data-ru>Пробуксовка, рывки при трогании, запах горелого — разбираем симптомы и объясняем, когда пора в сервис.</span><span data-ro>Alunecare, șuturi la pornire, miros de ars — analizăm simptomele și explicăm când e cazul să veniți la service.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 5 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/pokraska-avto.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a0a0a,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🎨</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Кузов / Caroserie</div>
+      <a href="blog/pokraska-avto.html" class="blog-card">
+        <div class="blog-card-head grad-3">
+          <span class="card-icon">🎨</span>
+          <div class="card-label">Кузов / Caroserie</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Покраска авто: полный гид</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Полная или частичная покраска, выбор лака, подбор цвета и гарантия. Всё что нужно знать перед визитом в покрасочный цех.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 8 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Покраска авто: полный гид</span><span data-ro>Vopsirea maşinii: ghid complet</span></h2>
+          <p class="card-desc"><span data-ru>Полная или частичная покраска, выбор лака, подбор цвета и гарантия. Всё что нужно знать перед визитом в покрасочный цех.</span><span data-ro>Vopsire completă sau parţială, alegerea lacului, selecţia culorii şi garanţia. Tot ce trebuie să ştii înainte de vizita în secţia de vopsire.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 8 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/remont-podveski.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#0a1a0e,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🔧</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Подвеска / Suspensie</div>
+      <a href="blog/remont-podveski.html" class="blog-card">
+        <div class="blog-card-head grad-4">
+          <span class="card-icon">🔧</span>
+          <div class="card-label">Подвеска / Suspensie</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Почему скрипит и стучит подвеска?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Стук на кочках, скрип при повороте — диагностируем причины и объясняем, что можно откладывать, а что нельзя.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 6 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Почему скрипит и стучит подвеска?</span><span data-ro>De ce scârțâie și pocnește suspensia?</span></h2>
+          <p class="card-desc"><span data-ru>Стук на кочках, скрип при повороте — диагностируем причины и объясняем, что можно откладывать, а что нельзя.</span><span data-ro>Pocnete pe denivelări, scârțâit la viraje — diagnosticăm cauzele și explicăm ce poate aștepta și ce trebuie reparat urgent.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 6 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/zamena-masla.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a1400,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🛢️</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">ТО / Întreținere</div>
+      <a href="blog/zamena-masla.html" class="blog-card">
+        <div class="blog-card-head grad-5">
+          <span class="card-icon">🛢️</span>
+          <div class="card-label">ТО / Întreținere</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Как часто менять масло в двигателе?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Каждые 10 000 км или раз в год? Разбираем мифы и даём чёткие рекомендации для Молдовы и наших дорог.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 5 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Как часто менять масло в двигателе?</span><span data-ro>Cât de des se schimbă uleiul de motor?</span></h2>
+          <p class="card-desc"><span data-ru>Каждые 10 000 км или раз в год? Разбираем мифы и даём чёткие рекомендации для Молдовы и наших дорог.</span><span data-ro>La fiecare 10.000 km sau o dată pe an? Demontăm miturile și oferim recomandări clare pentru Moldova și drumurile noastre.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 5 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/zapraska-kondicionera.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#001a1a,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">❄️</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Климат / Climatizare</div>
+      <a href="blog/zapraska-kondicionera.html" class="blog-card">
+        <div class="blog-card-head grad-6">
+          <span class="card-icon">❄️</span>
+          <div class="card-label">Климат / Climatizare</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Заправка кондиционера авто: когда и зачем?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Фреон испаряется постепенно — примерно 15% в год. Рассказываем о признаках нехватки фреона и стоимости заправки.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 4 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Заправка кондиционера авто: когда и зачем?</span><span data-ro>Încărcarea aerului condiționat auto: când și de ce?</span></h2>
+          <p class="card-desc"><span data-ru>Фреон испаряется постепенно — примерно 15% в год. Рассказываем о признаках нехватки фреона и стоимости заправки.</span><span data-ro>Freonul se evaporă treptat — aproximativ 15% pe an. Vorbim despre semnele lipsei de freon și despre costul reîncărcării.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 4 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/rihtovka-kuzova.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#0e0e1a,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🔨</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Жестянка / Tinichigerie</div>
+      <a href="blog/rihtovka-kuzova.html" class="blog-card">
+        <div class="blog-card-head grad-7">
+          <span class="card-icon">💻</span>
+          <div class="card-label">Диагностика / Diagnosticare</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Рихтовка или замена детали — что выгоднее?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Вмятина на двери или крыле — не всегда надо покупать новую деталь. Разбираем, когда рихтовка реально выгоднее.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 6 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Рихтовка или замена детали — что выгоднее?</span><span data-ro>Îndreptare sau înlocuire piesă — ce este mai avantajos?</span></h2>
+          <p class="card-desc"><span data-ru>Вмятина на двери или крыле — не всегда надо покупать новую деталь. Разбираем, когда рихтовка реально выгоднее.</span><span data-ro>Dentă la portieră sau aripă — nu întotdeauna trebuie să cumpărați o piesă nouă. Analizăm când îndreptarea este cu adevărat mai avantajoasă.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 6 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/remont-bamperov.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a0a12,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🚗</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Кузов / Caroserie</div>
+      <a href="blog/remont-bamperov.html" class="blog-card">
+        <div class="blog-card-head grad-8">
+          <span class="card-icon">🌨️</span>
+          <div class="card-label">Сезонное / Sezonier</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Ремонт бампера vs покупка нового</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Треснутый или сломанный бампер? Сварка пластика зачастую обходится в 3–5 раз дешевле нового. Объясняем когда это возможно.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 5 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Ремонт бампера vs покупка нового</span><span data-ro>Reparare bara vs cumpărare nouă</span></h2>
+          <p class="card-desc"><span data-ru>Треснувший или сломанный бампер? Сварка пластика зачастую обходится в 3–5 раз дешевле нового. Объясняем когда это возможно.</span><span data-ro>Bara crăpată sau ruptă? Sudarea plasticului costă de obicei de 3–5 ori mai puțin decât una nouă. Explicăm când este posibil.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 5 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/diagnostika-avto.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#001018,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">💻</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Диагностика / Diagnosticare</div>
+      <a href="blog/diagnostika-avto.html" class="blog-card">
+        <div class="blog-card-head grad-7">
+          <span class="card-icon">💻</span>
+          <div class="card-label">Диагностика / Diagnosticare</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Компьютерная диагностика авто: что это?</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">Что именно проверяет диагностика, что означает check engine и почему не стоит её игнорировать. Простым языком.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 5 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Компьютерная диагностика авто: что это?</span><span data-ro>Diagnosticare computerizată auto: ce înseamnă?</span></h2>
+          <p class="card-desc"><span data-ru>Что именно проверяет диагностика, что означает check engine и почему не стоит её игнорировать. Простым языком.</span><span data-ro>Ce verifică diagnosticarea auto, ce înseamnă check engine și de ce nu trebuie ignorat. Simplu și clar.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 5 мин</span>
           </div>
         </div>
       </a>
-      <a href="blog/podgotovka-avto-k-zime.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .22s,transform .22s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#0a0f1a,#111);padding:28px 22px 20px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:30px">🌨️</span>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:10px">Сезонное / Sezonier</div>
+      <a href="blog/podgotovka-avto-k-zime.html" class="blog-card">
+        <div class="blog-card-head grad-8">
+          <span class="card-icon">🌨️</span>
+          <div class="card-label">Сезонное / Sezonier</div>
         </div>
-        <div style="padding:18px 20px">
-          <h2 style="font-family:var(--fh);font-size:19px;margin-bottom:8px;line-height:1.25;color:var(--white)">Подготовка авто к зиме: чек-лист</h2>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55;margin-bottom:14px">10 пунктов, которые нужно проверить до первых морозов. Подвеска, аккумулятор, антифриз, резина — разбираем всё.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="color:var(--red);font-size:12px;font-weight:700;letter-spacing:.06em">Читать →</span>
-            <span style="font-size:11px;color:var(--gray2)">📖 7 мин</span>
+        <div class="card-body">
+          <h2 class="card-title"><span data-ru>Подготовка авто к зиме: чек-лист</span><span data-ro>Pregătirea mașinii pentru iarnă: checklist</span></h2>
+          <p class="card-desc"><span data-ru>10 пунктов, которые нужно проверить до первых морозов. Подвеска, аккумулятор, антифриз, резина — разбираем всё.</span><span data-ro>10 puncte de verificat înainte de primele înghețuri. Suspensia, bateria, antigelul, anvelopele — analizăm totul.</span></p>
+          <div class="card-footer">
+            <span class="read-link"><span data-ru>Читать →</span><span data-ro>Citește →</span></span>
+            <span class="card-meta">📖 7 мин</span>
           </div>
         </div>
       </a>
@@ -203,20 +208,21 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
 </main>
 <footer>
   <div class="con">
-    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center">
-      <div>
-        <div style="font-family:var(--fh);font-size:20px;letter-spacing:.06em">BLACK <span style="color:var(--red)">AUTO</span>SERVICE</div>
-        <div style="font-size:12px;color:var(--gray2);margin-top:6px">© 2025 · str. Varnița 2/3, Chișinău · 068 078 078</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div>BLACK <span>AUTO</span>SERVICE</div>
+        <div class="footer-copy">© 2025 · str. Varnița 2/3, Chișinău · 068 078 078</div>
       </div>
-      <div style="display:flex;gap:20px;flex-wrap:wrap">
-        <a href="index.html" style="font-size:13px;color:var(--gray2)">Главная</a>
-        <a href="blog.html" style="font-size:13px;color:var(--gray2)">Блог</a>
-        <a href="privacy.html" style="font-size:13px;color:var(--gray2)">Конфиденциальность</a>
-        <a href="cookies.html" style="font-size:13px;color:var(--gray2)">Cookie</a>
-        <a href="index.html#map" style="font-size:13px;color:var(--gray2)">Контакты</a>
+      <div class="footer-nav">
+        <a href="index.html" class="footer-link">Главная</a>
+        <a href="blog.html" class="footer-link">Блог</a>
+        <a href="privacy.html" class="footer-link">Конфиденциальность</a>
+        <a href="cookies.html" class="footer-link">Cookie</a>
+        <a href="index.html#map" class="footer-link">Контакты</a>
       </div>
     </div>
   </div>
 </footer>
+<script src="lang.js"></script>
 </body>
 </html>

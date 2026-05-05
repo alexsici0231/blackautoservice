@@ -73,7 +73,7 @@ section{padding:96px 0}
 @media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2n){border-right:none}.stat-item:nth-child(n+3){border-top:1px solid var(--bdr)}.stat-item:last-child{grid-column:1/-1}}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
 .nb{font-family:var(--fh);font-size:20px;letter-spacing:.06em;white-space:nowrap}.nb span{color:var(--red)}
 .nl{display:flex;gap:28px;align-items:center}
 .nl a{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);transition:color var(--t)}.nl a:hover{color:var(--white)}
@@ -206,6 +206,15 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0}
 .fc{font-size:12px;color:var(--gray2);margin-top:5px}
 .fl{display:flex;gap:22px;flex-wrap:wrap}
 .fl a{font-size:12px;color:var(--gray2);transition:color var(--t)}.fl a:hover{color:var(--white)}
+.cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#111;border-top:1px solid #2a2a2a;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.cookie-text{font-size:13px;color:#999;max-width:680px;line-height:1.55}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0}
+.cookie-button{background:#C8102E;color:#fff;border:none;padding:10px 22px;border-radius:7px;font-weight:700;font-size:13px;cursor:pointer}
+.cookie-button-secondary{background:transparent;color:#999;border:1px solid #333;padding:10px 18px;border-radius:7px;font-size:13px;cursor:pointer}
+.cookie-link{color:#C8102E}
+.bg-1{background:linear-gradient(135deg,#1a0a0e,#2a0d15)}
+.bg-2{background:linear-gradient(135deg,#0a0f1a,#0d1829)}
+.bg-3{background:linear-gradient(135deg,#1a0a0a,#2d0e0e)}
 
 /* LANG */
 [data-ro]{display:none}
@@ -250,7 +259,7 @@ body.ro [data-ro]{display:block}
   <a href="#why" onclick="cls()"><span data-ru>О нас</span><span data-ro>Despre noi</span></a>
   <a href="#how" onclick="cls()"><span data-ru>Как работаем</span><span data-ro>Cum lucrăm</span></a>
   <a href="#map" onclick="cls()"><span data-ru>Контакты</span><span data-ro>Contacte</span></a>
-  <a href="tel:+37368078078" class="btn br" style="margin-top:28px;justify-content:center;font-size:16px;padding:17px;"><i class="fas fa-phone"></i> 068 078 078</a>
+  <a href="tel:+37368078078" class="btn br btn-phone"><i class="fas fa-phone"></i> 068 078 078</a>
 </div>
 
 <a href="tel:+37368078078" class="ph"><i class="fas fa-phone-alt"></i> 068 078 078</a>
@@ -283,32 +292,32 @@ body.ro [data-ro]{display:block}
 <div class="stats-sec" id="stats">
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="3000">0</span><span class="suf">+</span></div>
       <div class="stat-lbl" data-ru>Довольных клиентов</div><div class="stat-lbl" data-ro>Clienți mulțumiți</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="9">0</span><span class="suf">+</span></div>
       <div class="stat-lbl" data-ru>Лет на рынке</div><div class="stat-lbl" data-ro>Ani pe piață</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="13">0</span><span class="suf">+</span></div>
       <div class="stat-lbl" data-ru>Видов услуг</div><div class="stat-lbl" data-ro>Tipuri de servicii</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4m0 4h.01"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4m0 4h.01"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="24">0</span><span class="suf" data-ru> мес.</span><span class="suf" data-ro> luni</span></div>
       <div class="stat-lbl" data-ru>Гарантия на покраску</div><div class="stat-lbl" data-ro>Garanție vopsire</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2m-14 0h14M5 17v2m14-2v2"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2m-14 0h14M5 17v2m14-2v2"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="50">0</span><span class="suf">+</span></div>
       <div class="stat-lbl" data-ru>Марок автомобилей</div><div class="stat-lbl" data-ro>Mărci auto deservite</div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="15">0</span><span class="suf" data-ru> мин</span><span class="suf" data-ro> min</span></div>
       <div class="stat-lbl" data-ru>Диагностика авто</div><div class="stat-lbl" data-ro>Diagnosticare auto</div>
     </div>
@@ -320,8 +329,8 @@ body.ro [data-ro]{display:block}
   <div class="con">
     <div class="ii"><i class="fas fa-map-marker-alt"></i><span>str. <strong>Varnița 2/3</strong>, Chișinău</span></div>
     <div class="ii"><i class="fas fa-phone"></i><a href="tel:+37368078078"><strong>068 078 078</strong></a></div>
-    <div class="ii"><span style="display:inline-flex;width:28px;height:28px;color:var(--red);margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span data-ru><strong>Пн–Пт</strong> 08:00–19:00 · <strong>Сб</strong> 09:00–16:00</span><span data-ro><strong>Luni–Vineri</strong> 08:00–19:00 · <strong>Sâmbătă</strong> 09:00–16:00</span></div>
-    <div class="ii"><span style="display:inline-flex;width:14px;height:14px;color:var(--red)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></div>
+    <div class="ii"><span class="icon-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span data-ru><strong>Пн–Пт</strong> 08:00–19:00 · <strong>Сб</strong> 09:00–16:00</span><span data-ro><strong>Luni–Vineri</strong> 08:00–19:00 · <strong>Sâmbătă</strong> 09:00–16:00</span></div>
+    <div class="ii"><span class="icon-small"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></div>
   </div>
 </div>
 
@@ -333,18 +342,18 @@ body.ro [data-ro]{display:block}
     <p class="sd" data-ru>Специализируемся на кузовном ремонте и полном техническом обслуживании. Работаем со всеми марками авто — VW, BMW, Mercedes, Toyota, Renault, Opel, ВАЗ и другими.</p>
     <p class="sd" data-ro>Specializați în caroserie și service complet. Lucrăm cu toate mărcile — VW, BMW, Mercedes, Toyota, Renault, Opel, VAZ și altele.</p>
     <div class="sg rv">
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM3 17V9l2-5h12l2 5v8"/><path d="M14 9H3m18 0H14M8 5v4m8-4v4"/><path d="M17 4l3-3m0 0l-2 2m2-2l-2-2" stroke-width="2"/></svg></span></div><h3 data-ru>Ремонт кузова</h3><h3 data-ro>Reparație caroserie</h3><p data-ru>Устранение вмятин, трещин, деформаций. Восстановление после ДТП любой сложности.</p><p data-ro>Eliminarea loviturilor, fisurilor, deformărilor. Restabilire după accident de orice complexitate.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12L6.5 20.5a2.121 2.121 0 0 1-3-3L12 9"/><path d="M17.5 9.5l-5-5 3-3 7 7-5 1z"/><path d="M14.5 6.5l3 3"/></svg></span></div><h3 data-ru>Рихтовка / Жестяные работы</h3><h3 data-ro>Tinichigerie / Îndreptare</h3><p data-ru>Правка панелей, крыльев, дверей и капота. Восстановление геометрии кузова.</p><p data-ro>Îndreptarea panourilor, aripilor, ușilor și capotei. Restabilirea geometriei caroseriei.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="8" height="12" rx="2"/><path d="M8 14h8M11 10V7m2 3V7m-3-3h4v3h-4z"/><path d="M18 7l2-2m-2 4h2m-3-5l1-2"/></svg></span></div><h3 data-ru>Покраска авто</h3><h3 data-ro>Vopsire auto</h3><p data-ru>Полная и частичная покраска в камере. Компьютерный подбор цвета. Матовый / глянцевый лак.</p><p data-ro>Vopsire totală și parțială în cameră. Selectarea culorii pe calculator. Lac mat / lucios.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/><path d="M12 8v1m0 6v1m-4-4H7m10 0h-1"/></svg></span></div><h3 data-ru>Замена ремня ГРМ</h3><h3 data-ro>Schimb curea distribuție</h3><p data-ru>Замена ремня ГРМ, роликов и водяной помпы. Своевременная замена — дешевле ремонта двигателя.</p><p data-ro>Schimbarea curelei, rolelor și pompei de apă. Prevenție eficientă a defecțiunilor motorului.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v3l-5.5 5m11-5L12 10.5"/><path d="M7.3 16.5l4.7-3 4.7 3"/></svg></span></div><h3 data-ru>Замена сцепления</h3><h3 data-ro>Schimbare ambreaj</h3><p data-ru>Замена дисков, корзины и выжимного подшипника сцепления. Диагностика трансмиссии.</p><p data-ro>Schimbarea discurilor, coșului și rulmentului de presiune. Diagnosticare transmisie.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V9l2-4h14l2 4v7"/><path d="M3 16h18M7 16v2m10-2v2"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/><path d="M7 9h10M9 9V5m6 4V5"/><path d="M11 2h2l1 3h-4z"/></svg></span></div><h3 data-ru>Ремонт подвески</h3><h3 data-ro>Reparație suspensie</h3><p data-ru>Замена рычагов, шаровых, амортизаторов, сайлентблоков. Развал-схождение.</p><p data-ro>Schimb brațe, articulații, amortizoare, silentblocs. Reglaj geometrie roți.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9l-2-3H3v12z"/><path d="M19 13h2v2h-2zM6 11v7"/><path d="M9 8l-1-2"/></svg></span></div><h3 data-ru>Замена масла и фильтров</h3><h3 data-ro>Schimbare ulei și filtre</h3><p data-ru>Моторное масло, масляный, воздушный, салонный фильтры. Только качественные материалы.</p><p data-ro>Ulei motor, filtre ulei, aer, habitaclu. Numai materiale de calitate garantată.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M20 16l-4-4 4-4M4 8l4 4-4 4"/><path d="M16 4l-4 4-4-4m0 16l4-4 4 4"/></svg></span></div><h3 data-ru>Заправка кондиционера</h3><h3 data-ro>Încărcare aer condiționat</h3><p data-ru>Диагностика, чистка испарителя, дозаправка фреоном. Устранение запахов из салона.</p><p data-ro>Diagnosticare, curățare evaporator, reîncărcare freon. Eliminarea mirosurilor din habitaclu.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 7 7 9 7 13a5 5 0 0 0 10 0c0-3-1-5-3-7"/><path d="M12 22v-4m0 0c-1.5 0-3-1-3-3s1.5-3 3-3 3 1 3 3-1.5 3-3 3z"/></svg></span></div><h3 data-ru>Сварка пластика</h3><h3 data-ro>Sudare plastic</h3><p data-ru>Горячая сварка бамперов, арок и порогов. Дешевле новых деталей. Результат как новый.</p><p data-ro>Sudarea la cald a barelor, aripilor și pragurilor. Mai ieftin decât piesele noi.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V11l3-5h11l3 5v6H3z"/><path d="M6 11h12M7 8l2-2h6l2 2"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span></div><h3 data-ru>Восстановление бамперов</h3><h3 data-ro>Restabilire bare față/spate</h3><p data-ru>Ремонт и восстановление передних и задних бамперов. Покраска в цвет кузова.</p><p data-ro>Repararea și restabilirea barelor față și spate. Vopsire în culoarea caroseriei.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div><h3 data-ru>Диагностика авто</h3><h3 data-ro>Diagnosticare auto</h3><p data-ru>Компьютерная диагностика двигателя и всех систем. Выявление скрытых неисправностей.</p><p data-ro>Diagnosticare computerizată a motorului și tuturor sistemelor. Defecțiuni ascunse identificate.</p></div>
-      <div class="sc"><div class="si"><span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></div><h3 data-ru>Замена свечей зажигания</h3><h3 data-ro>Schimbare bujii</h3><p data-ru>Замена свечей зажигания и накала. Диагностика системы зажигания. Все марки и модели.</p><p data-ro>Schimbarea bujiilor de aprindere și incandescență. Diagnosticarea sistemului de aprindere.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM3 17V9l2-5h12l2 5v8"/><path d="M14 9H3m18 0H14M8 5v4m8-4v4"/><path d="M17 4l3-3m0 0l-2 2m2-2l-2-2" stroke-width="2"/></svg></span></div><h3 data-ru>Ремонт кузова</h3><h3 data-ro>Reparație caroserie</h3><p data-ru>Устранение вмятин, трещин, деформаций. Восстановление после ДТП любой сложности.</p><p data-ro>Eliminarea loviturilor, fisurilor, deformărilor. Restabilire după accident de orice complexitate.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12L6.5 20.5a2.121 2.121 0 0 1-3-3L12 9"/><path d="M17.5 9.5l-5-5 3-3 7 7-5 1z"/><path d="M14.5 6.5l3 3"/></svg></span></div><h3 data-ru>Рихтовка / Жестяные работы</h3><h3 data-ro>Tinichigerie / Îndreptare</h3><p data-ru>Правка панелей, крыльев, дверей и капота. Восстановление геометрии кузова.</p><p data-ro>Îndreptarea panourilor, aripilor, ușilor și capotei. Restabilirea geometriei caroseriei.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="8" height="12" rx="2"/><path d="M8 14h8M11 10V7m2 3V7m-3-3h4v3h-4z"/><path d="M18 7l2-2m-2 4h2m-3-5l1-2"/></svg></span></div><h3 data-ru>Покраска авто</h3><h3 data-ro>Vopsire auto</h3><p data-ru>Полная и частичная покраска в камере. Компьютерный подбор цвета. Матовый / глянцевый лак.</p><p data-ro>Vopsire totală și parțială în cameră. Selectarea culorii pe calculator. Lac mat / lucios.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/><path d="M12 8v1m0 6v1m-4-4H7m10 0h-1"/></svg></span></div><h3 data-ru>Замена ремня ГРМ</h3><h3 data-ro>Schimb curea distribuție</h3><p data-ru>Замена ремня ГРМ, роликов и водяной помпы. Своевременная замена — дешевле ремонта двигателя.</p><p data-ro>Schimbarea curelei, rolelor și pompei de apă. Prevenție eficientă a defecțiunilor motorului.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v3l-5.5 5m11-5L12 10.5"/><path d="M7.3 16.5l4.7-3 4.7 3"/></svg></span></div><h3 data-ru>Замена сцепления</h3><h3 data-ro>Schimbare ambreaj</h3><p data-ru>Замена дисков, корзины и выжимного подшипника сцепления. Диагностика трансмиссии.</p><p data-ro>Schimbarea discurilor, coșului și rulmentului de presiune. Diagnosticare transmisie.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V9l2-4h14l2 4v7"/><path d="M3 16h18M7 16v2m10-2v2"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/><path d="M7 9h10M9 9V5m6 4V5"/><path d="M11 2h2l1 3h-4z"/></svg></span></div><h3 data-ru>Ремонт подвески</h3><h3 data-ro>Reparație suspensie</h3><p data-ru>Замена рычагов, шаровых, амортизаторов, сайлентблоков. Развал-схождение.</p><p data-ro>Schimb brațe, articulații, amortizoare, silentblocs. Reglaj geometrie roți.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9l-2-3H3v12z"/><path d="M19 13h2v2h-2zM6 11v7"/><path d="M9 8l-1-2"/></svg></span></div><h3 data-ru>Замена масла и фильтров</h3><h3 data-ro>Schimbare ulei și filtre</h3><p data-ru>Моторное масло, масляный, воздушный, салонный фильтры. Только качественные материалы.</p><p data-ro>Ulei motor, filtre ulei, aer, habitaclu. Numai materiale de calitate garantată.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M20 16l-4-4 4-4M4 8l4 4-4 4"/><path d="M16 4l-4 4-4-4m0 16l4-4 4 4"/></svg></span></div><h3 data-ru>Заправка кондиционера</h3><h3 data-ro>Încărcare aer condiționat</h3><p data-ru>Диагностика, чистка испарителя, дозаправка фреоном. Устранение запахов из салона.</p><p data-ro>Diagnosticare, curățare evaporator, reîncărcare freon. Eliminarea mirosurilor din habitaclu.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 7 7 9 7 13a5 5 0 0 0 10 0c0-3-1-5-3-7"/><path d="M12 22v-4m0 0c-1.5 0-3-1-3-3s1.5-3 3-3 3 1 3 3-1.5 3-3 3z"/></svg></span></div><h3 data-ru>Сварка пластика</h3><h3 data-ro>Sudare plastic</h3><p data-ru>Горячая сварка бамперов, арок и порогов. Дешевле новых деталей. Результат как новый.</p><p data-ro>Sudarea la cald a barelor, aripilor și pragurilor. Mai ieftin decât piesele noi.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V11l3-5h11l3 5v6H3z"/><path d="M6 11h12M7 8l2-2h6l2 2"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span></div><h3 data-ru>Восстановление бамперов</h3><h3 data-ro>Restabilire bare față/spate</h3><p data-ru>Ремонт и восстановление передних и задних бамперов. Покраска в цвет кузова.</p><p data-ro>Repararea și restabilirea barelor față și spate. Vopsire în culoarea caroseriei.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div><h3 data-ru>Диагностика авто</h3><h3 data-ro>Diagnosticare auto</h3><p data-ru>Компьютерная диагностика двигателя и всех систем. Выявление скрытых неисправностей.</p><p data-ro>Diagnosticare computerizată a motorului și tuturor sistemelor. Defecțiuni ascunse identificate.</p></div>
+      <div class="sc"><div class="si"><span class="icon-service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></div><h3 data-ru>Замена свечей зажигания</h3><h3 data-ro>Schimbare bujii</h3><p data-ru>Замена свечей зажигания и накала. Диагностика системы зажигания. Все марки и модели.</p><p data-ro>Schimbarea bujiilor de aprindere și incandescență. Diagnosticarea sistemului de aprindere.</p></div>
     </div>
   </div>
 </section>
@@ -366,10 +375,10 @@ body.ro [data-ro]{display:block}
     <div class="sl" data-ru>Почему выбирают нас</div><div class="sl" data-ro>De ce ne aleg clienții</div>
     <h2 class="st" data-ru>Наши преимущества</h2><h2 class="st" data-ro>Avantajele noastre</h2>
     <div class="wg">
-      <div class="wc rv d1"><div class="wn">01</div><span style="display:inline-flex;width:28px;height:28px;color:var(--red);margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span><h3 data-ru>Честные цены</h3><h3 data-ro>Prețuri corecte</h3><p data-ru>Озвучиваем стоимость до начала работ. Без скрытых доплат и навязанных услуг.</p><p data-ro>Comunicăm costul înainte. Fără taxe ascunse și servicii impuse.</p></div>
-      <div class="wc rv d2"><div class="wn">02</div><span style="display:inline-flex;width:18px;height:18px;color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4m0 4h.01"/></svg></span><h3 data-ru>Гарантия на работы</h3><h3 data-ro>Garanție la lucrări</h3><p data-ru>Письменная гарантия на все работы. Если что-то не так — устраним бесплатно.</p><p data-ro>Garanție scrisă pentru toate lucrările. Dacă ceva nu e în regulă — remediem gratuit.</p></div>
-      <div class="wc rv d3"><div class="wn">03</div><span style="display:inline-flex;width:28px;height:28px;color:var(--red);margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v1h10.3"/><circle cx="18" cy="17" r="2"/><path d="M18 13v1m0 6v1m-3-4h1m4 0h1m-4.5-3.5l.7.7m3.5 3.5l.7.7m-4.9-.7l.7-.7m3.5-3.5l.7-.7"/></svg></span><h3 data-ru>Опытные мастера</h3><h3 data-ro>Meșteri cu experiență</h3><p data-ru>Специалисты с опытом кузовного ремонта и покраски. Все марки и модели.</p><p data-ro>Specialiști cu experiență în caroserie și vopsire. Toate mărcile de automobile.</p></div>
-      <div class="wc rv d4"><div class="wn">04</div><span style="display:inline-flex;width:28px;height:28px;color:var(--red);margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3 data-ru>Быстро и в срок</h3><h3 data-ro>Rapid și la timp</h3><p data-ru>Соблюдаем сроки. Диагностика в день обращения. Запись по телефону или в DM.</p><p data-ro>Respectăm termenele. Diagnosticare în ziua solicitării. Programare telefonic sau DM.</p></div>
+      <div class="wc rv d1"><div class="wn">01</div><span class="icon-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span><h3 data-ru>Честные цены</h3><h3 data-ro>Prețuri corecte</h3><p data-ru>Озвучиваем стоимость до начала работ. Без скрытых доплат и навязанных услуг.</p><p data-ro>Comunicăm costul înainte. Fără taxe ascunse și servicii impuse.</p></div>
+      <div class="wc rv d2"><div class="wn">02</div><span class="icon-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4m0 4h.01"/></svg></span><h3 data-ru>Гарантия на работы</h3><h3 data-ro>Garanție la lucrări</h3><p data-ru>Письменная гарантия на все работы. Если что-то не так — устраним бесплатно.</p><p data-ro>Garanție scrisă pentru toate lucrările. Dacă ceva nu e în regulă — remediem gratuit.</p></div>
+      <div class="wc rv d3"><div class="wn">03</div><span class="icon-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v1h10.3"/><circle cx="18" cy="17" r="2"/><path d="M18 13v1m0 6v1m-3-4h1m4 0h1m-4.5-3.5l.7.7m3.5 3.5l.7.7m-4.9-.7l.7-.7m3.5-3.5l.7-.7"/></svg></span><h3 data-ru>Опытные мастера</h3><h3 data-ro>Meșteri cu experiență</h3><p data-ru>Специалисты с опытом кузовного ремонта и покраски. Все марки и модели.</p><p data-ro>Specialiști cu experiență în caroserie și vopsire. Toate mărcile de automobile.</p></div>
+      <div class="wc rv d4"><div class="wn">04</div><span class="icon-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3 data-ru>Быстро и в срок</h3><h3 data-ro>Rapid și la timp</h3><p data-ru>Соблюдаем сроки. Диагностика в день обращения. Запись по телефону или в DM.</p><p data-ro>Respectăm termenele. Diagnosticare în ziua solicitării. Programare telefonic sau DM.</p></div>
     </div>
   </div>
 </section>
@@ -403,7 +412,7 @@ body.ro [data-ro]{display:block}
         <a href="https://www.google.com/maps/dir/?api=1&destination=str.+Varnița+2%2F3,+Chișinău,+Moldova" target="_blank" rel="noopener" class="db">
           <i class="fas fa-route"></i>
           <span data-ru>Проложить маршрут</span><span data-ro>Construiți ruta</span>
-          <i class="fas fa-external-link-alt" style="font-size:10px;color:var(--gray2)"></i>
+          <i class="fas fa-external-link-alt icon-ext"></i>
         </a>
       </div>
 
@@ -412,11 +421,11 @@ body.ro [data-ro]{display:block}
         <a href="tel:+37368078078" class="cph">068 078 078</a>
         <div class="cd">
           <div class="cdi"><div class="cio"><i class="fas fa-map-marker-alt"></i></div><div class="ct"><strong data-ru>Адрес</strong><strong data-ro>Adresă</strong><span>str. Varnița 2/3, Chișinău, Moldova</span></div></div>
-          <div class="cdi"><div class="cio"><span style="display:inline-flex;width:28px;height:28px;color:var(--red);margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div><div class="ct"><strong data-ru>Режим работы</strong><strong data-ro>Program</strong><span data-ru>Пн–Пт: 08:00–19:00 · Сб: 09:00–16:00 · Вс: выходной</span><span data-ro>Luni–Vineri: 08:00–19:00 · Sâmbătă: 09:00–16:00 · Duminică: liber</span></div></div>
-          <div class="cdi"><div class="cio"><span style="display:inline-flex;width:14px;height:14px;color:var(--red)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span></div><div class="ct"><strong>TikTok</strong><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></div></div>
+          <div class="cdi"><div class="cio"><span class="icon-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div><div class="ct"><strong data-ru>Режим работы</strong><strong data-ro>Program</strong><span data-ru>Пн–Пт: 08:00–19:00 · Сб: 09:00–16:00 · Вс: выходной</span><span data-ro>Luni–Vineri: 08:00–19:00 · Sâmbătă: 09:00–16:00 · Duminică: liber</span></div></div>
+          <div class="cdi"><div class="cio"><span class="icon-small"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span></div><div class="ct"><strong>TikTok</strong><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></div></div>
           <div class="cdi"><div class="cio"><i class="fas fa-comment-dots"></i></div><div class="ct"><strong data-ru>Запись в DM</strong><strong data-ro>Programări DM</strong><span data-ru>Пишите в TikTok — ответим быстро</span><span data-ro>Scrieți în TikTok — răspundem rapid</span></div></div>
         </div>
-        <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener" class="tp"><span style="display:inline-flex;width:14px;height:14px;color:var(--red)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><span data-ru>Наши работы в TikTok</span><span data-ro>Lucrările noastre pe TikTok</span><i class="fas fa-arrow-up-right-from-square" style="font-size:10px;color:var(--gray2);margin-left:4px"></i></a>
+        <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener" class="tp"><span class="icon-small"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><span data-ru>Наши работы в TikTok</span><span data-ro>Lucrările noastre pe TikTok</span><i class="fas fa-arrow-up-right-from-square icon-ext"></i></a>
 
         <div class="fb2">
           <h3 data-ru>Оставить заявку</h3><h3 data-ro>Trimiteți o cerere</h3>
@@ -442,7 +451,7 @@ body.ro [data-ro]{display:block}
             </div>
             <div class="fg"><label data-ru>Марка / Модель</label><label data-ro>Marca / Modelul</label><input type="text" placeholder="ex: VW Golf 2016"></div>
             <div class="fg"><label data-ru>Комментарий</label><label data-ro>Comentariu</label><textarea id="ta" placeholder="..."></textarea></div>
-            <button type="submit" class="btn br" style="width:100%;justify-content:center;padding:16px;" id="sb"><i class="fas fa-paper-plane"></i><span data-ru>Отправить заявку</span><span data-ro>Trimite cererea</span></button>
+            <button type="submit" class="btn br btn-submit" id="sb"><i class="fas fa-paper-plane"></i><span data-ru>Отправить заявку</span><span data-ro>Trimite cererea</span></button>
             <p class="fn" data-ru>📩 Данные не передаём третьим лицам. Свяжемся в течение 30 минут.</p>
             <p class="fn" data-ro>📩 Nu transmitem datele. Vă contactăm în 30 de minute.</p>
           </form>
@@ -453,68 +462,61 @@ body.ro [data-ro]{display:block}
 </section>
 
 <!-- BLOG PREVIEW -->
-<section style="background:var(--bg)" id="blog">
+<section class="blog-preview" id="blog">
   <div class="con">
     <div class="sl" data-ru>Полезные статьи</div><div class="sl" data-ro>Articole utile</div>
     <h2 class="st" data-ru>Блог автосервиса</h2><h2 class="st" data-ro>Blogul service-ului auto</h2>
     <p class="sd" data-ru>Советы по обслуживанию авто, разбор частых поломок и ответы на популярные вопросы.</p>
     <p class="sd" data-ro>Sfaturi de întreținere auto, analiza defecțiunilor frecvente și răspunsuri la întrebări populare.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px" class="rv">
-      <a href="blog/kogda-menyat-remen-grm.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a0a0e,#2a0d15);padding:32px 24px 24px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:32px">⚙️</span>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ru>Двигатель</div>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ro>Motor</div>
+    <div class="blog-preview-grid rv">
+      <a href="blog/kogda-menyat-remen-grm.html" class="blog-card">
+        <div class="blog-card-head bg-1">
+          <span class="card-icon">⚙️</span>
+          <div class="card-category" data-ru>Двигатель</div><div class="card-category" data-ro>Motor</div>
         </div>
-        <div style="padding:20px 22px">
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ru>Когда менять ремень ГРМ?</h3>
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ro>Când se schimbă curea de distribuție?</h3>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ru>Пропустить срок замены ремня ГРМ — значит рисковать капремонтом двигателя. Рассказываем, как не пропустить момент.</p>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ro>Să ratezi termenul de schimbare a curelei înseamnă să riști o revizie majoră a motorului. Vă explicăm cum să nu pierdeți momentul.</p>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ru>Читать →</div>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ro>Citește →</div>
+        <div class="card-body">
+          <h3 class="card-title" data-ru>Когда менять ремень ГРМ?</h3>
+          <h3 class="card-title" data-ro>Când se schimbă curea de distribuție?</h3>
+          <p class="card-desc" data-ru>Пропустить срок замены ремня ГРМ — значит рисковать капремонтом двигателя. Рассказываем, как не пропустить момент.</p>
+          <p class="card-desc" data-ro>Să ratezi termenul de schimbare a curelei înseamnă să riști o revizie majoră a motorului. Vă explicăm cum să nu pierdeți momentul.</p>
+          <div class="read-link" data-ru>Читать →</div><div class="read-link" data-ro>Citește →</div>
         </div>
       </a>
-
-      <a href="blog/zamena-stsepleniya.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#0a0f1a,#0d1829);padding:32px 24px 24px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:32px">🔩</span>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ru>Трансмиссия</div>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ro>Transmisie</div>
+      <a href="blog/zamena-stsepleniya.html" class="blog-card">
+        <div class="blog-card-head bg-2">
+          <span class="card-icon">🔩</span>
+          <div class="card-category" data-ru>Трансмиссия</div><div class="card-category" data-ro>Transmisie</div>
         </div>
-        <div style="padding:20px 22px">
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ru>Признаки износа сцепления</h3>
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ro>Semne de uzură ale ambreajului</h3>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ru>5 симптомов, которые говорят, что пора менять сцепление. Чем раньше заметите — тем дешевле ремонт.</p>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ro>5 simptome care spun că e timpul să schimbați ambreajul. Cu cât îl observați mai devreme, cu atât reparația e mai ieftină.</p>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ru>Читать →</div>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ro>Citește →</div>
+        <div class="card-body">
+          <h3 class="card-title" data-ru>Признаки износа сцепления</h3>
+          <h3 class="card-title" data-ro>Semne de uzură ale ambreajului</h3>
+          <p class="card-desc" data-ru>5 симптомов, которые говорят, что пора менять сцепление. Чем раньше заметите — тем дешевле ремонт.</p>
+          <p class="card-desc" data-ro>5 simptome care spun că e timpul să schimbați ambreajul. Cu cât îl observați mai devreme, cu atât reparația e mai ieftină.</p>
+          <div class="read-link" data-ru>Читать →</div><div class="read-link" data-ro>Citește →</div>
         </div>
       </a>
-
-      <a href="blog/pokraska-avto.html" style="text-decoration:none;display:block;background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s" onmouseover="this.style.borderColor='var(--red)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.transform=''">
-        <div style="background:linear-gradient(135deg,#1a0a0a,#2d0e0e);padding:32px 24px 24px;border-bottom:1px solid var(--bdr)">
-          <span style="font-size:32px">🎨</span>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ru>Кузов</div>
-          <div style="font-family:var(--fh);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-top:12px" data-ro>Caroserie</div>
+      <a href="blog/pokraska-avto.html" class="blog-card">
+        <div class="blog-card-head bg-3">
+          <span class="card-icon">🎨</span>
+          <div class="card-category" data-ru>Кузов</div><div class="card-category" data-ro>Caroserie</div>
         </div>
-        <div style="padding:20px 22px">
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ru>Покраска авто: что нужно знать</h3>
-          <h3 style="font-family:var(--fh);font-size:20px;margin-bottom:8px;color:var(--white)" data-ro>Vopsirea mașinii: ce trebuie să știți</h3>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ru>Полная или частичная покраска? Как выбрать цвет? Сколько держится гарантия? Отвечаем на все вопросы.</p>
-          <p style="font-size:13px;color:var(--gray);line-height:1.55" data-ro>Vopsire totală sau parțială? Cum alegi culoarea? Cât durează garanția? Răspundem la toate întrebările.</p>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ru>Читать →</div>
-          <div style="color:var(--red);font-size:12px;font-weight:700;margin-top:14px;letter-spacing:.06em" data-ro>Citește →</div>
+        <div class="card-body">
+          <h3 class="card-title" data-ru>Покраска авто: что нужно знать</h3>
+          <h3 class="card-title" data-ro>Vopsirea mașinii: ce trebuie să știți</h3>
+          <p class="card-desc" data-ru>Полная или частичная покраска? Как выбрать цвет? Сколько держится гарантия? Отвечаем на все вопросы.</p>
+          <p class="card-desc" data-ro>Vopsire totală sau parțială? Cum alegi culoarea? Cât durează garanția? Răspundem la toate întrebările.</p>
+          <div class="read-link" data-ru>Читать →</div><div class="read-link" data-ro>Citește →</div>
         </div>
       </a>
     </div>
-    <div style="text-align:center;margin-top:36px">
-      <a href="blog.html" class="btn bg" style="font-size:14px">
+    <div class="blog-cta">
+      <a href="blog.html" class="btn bg">
         <span data-ru>Все статьи блога →</span><span data-ro>Toate articolele →</span>
       </a>
     </div>
   </div>
 </section>
+
 <!-- FOOTER -->
 <footer>
   <div class="con">
@@ -522,8 +524,8 @@ body.ro [data-ro]{display:block}
       <div>
         <div class="fbn">BLACK <span>AUTO</span>SERVICE</div>
         <div class="fc">© 2025 Black Auto Service · str. Varnița 2/3, Chișinău · ☎ 068 078 078</div>
-        <div class="fc" data-ru style="margin-top:3px">Ремонт кузова, покраска авто, жестяные работы в Кишинёве</div>
-        <div class="fc" data-ro style="margin-top:3px">Vopsire auto, tinichigerie, reparație caroserie în Chișinău</div>
+        <div class="fc footer-copy-extra" data-ru>Ремонт кузова, покраска авто, жестяные работы в Кишинёве</div>
+        <div class="fc footer-copy-extra" data-ro>Vopsire auto, tinichigerie, reparație caroserie în Chișinău</div>
       </div>
       <div class="fl">
         <a href="#services" data-ru>Услуги</a><a href="#services" data-ro>Servicii</a>
@@ -599,12 +601,12 @@ if (statsEl) statsObs.observe(statsEl);
 </script>
 
 <!-- COOKIE BANNER -->
-<div id="ckb" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#111;border-top:1px solid #2a2a2a;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
-  <p style="font-size:13px;color:#999;max-width:680px;line-height:1.55">🍪 Мы используем файлы cookie для аналитики и оптимизации рекламы. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="cookies.html" style="color:#C8102E">Политикой Cookie</a> и <a href="privacy.html" style="color:#C8102E">Политикой конфиденциальности</a>.</p>
-  <div style="display:flex;gap:10px;flex-shrink:0">
-    <button onclick="ckAccept()" style="background:#C8102E;color:#fff;border:none;padding:10px 22px;border-radius:7px;font-weight:700;font-size:13px;cursor:pointer">Принять</button>
-    <button onclick="ckDecline()" style="background:transparent;color:#999;border:1px solid #333;padding:10px 18px;border-radius:7px;font-size:13px;cursor:pointer">Только необходимые</button>
-    <a href="cookies.html" style="color:#666;font-size:12px;display:flex;align-items:center;padding:0 6px">Подробнее</a>
+<div id="ckb" class="cookie-banner">
+  <p class="cookie-text">🍪 Мы используем файлы cookie для аналитики и оптимизации рекламы. Продолжая использовать сайт, вы соглашаетесь с нашей <a href="cookies.html" class="cookie-link">Политикой Cookie</a> и <a href="privacy.html" class="cookie-link">Политикой конфиденциальности</a>.</p>
+  <div class="cookie-actions">
+    <button onclick="ckAccept()" class="cookie-button">Принять</button>
+    <button onclick="ckDecline()" class="cookie-button-secondary">Только необходимые</button>
+    <a href="cookies.html" class="cookie-link">Подробнее</a>
   </div>
 </div>
 <script>

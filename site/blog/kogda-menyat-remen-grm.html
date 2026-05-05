@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://blackautoservice.md/blog/kogda-menyat-remen-grm.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lang.css">
 <style>
 :root{--bg:#080808;--bg2:#101010;--bg3:#161616;--bdr:#232323;--red:#C8102E;--red2:#a50d25;--white:#f5f5f5;--gray:#999;--gray2:#555;--fh:'Bebas Neue',sans-serif;--fb:'Inter',sans-serif;--nh:70px;--r:10px;--t:.22s ease}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -15,7 +16,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--fb);line-height:1
 a{color:inherit;text-decoration:none}button{cursor:pointer;font-family:var(--fb)}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--red)}
 .con{max-width:1180px;margin:0 auto;padding:0 5%}
-nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);background:rgba(8,8,8,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
 .nb{font-family:var(--fh);font-size:20px;letter-spacing:.06em}.nb span{color:var(--red)}
 .nl{display:flex;gap:28px}.nl a{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);transition:color .2s}.nl a:hover{color:var(--white)}
 .nr{display:flex;gap:14px;align-items:center}
@@ -56,6 +57,10 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
     <a href="index.html#map">Контакты / Contacte</a>
   </div>
   <div class="nr">
+    <div class="lb">
+      <button class="on" onclick="setLang('ru')" type="button">RU</button>
+      <button onclick="setLang('ro')" type="button">RO</button>
+    </div>
     <a href="tel:+37368078078" class="nc">📞 068 078 078</a>
     <button class="bb" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -64,66 +69,80 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
   <a href="index.html#services" onclick="document.getElementById('mm').classList.remove('open')">Услуги / Servicii</a>
   <a href="blog.html" onclick="document.getElementById('mm').classList.remove('open')">Блог / Blog</a>
   <a href="index.html#map" onclick="document.getElementById('mm').classList.remove('open')">Контакты / Contacte</a>
-  <a href="tel:+37368078078" style="color:var(--red);font-size:28px">068 078 078</a>
+  <a href="tel:+37368078078" class="mobile-phone">068 078 078</a>
 </div>
 <article class="art">
   <div class="breadcrumb">
     <a href="../index.html">Главная</a> / <a href="../blog.html">Блог</a> / Когда нужно менять ремень ГРМ?
   </div>
-  <div style="font-size:40px;margin-bottom:16px">⚙️</div>
+  <div class="article-icon">⚙️</div>
   <div class="art-meta">
     <span class="art-tag">Двигатель</span>
     <span class="art-read">📖 7 мин чтения</span>
     <span class="art-read">Black Auto Service · Chișinău</span>
   </div>
-  <h1>Когда нужно менять ремень ГРМ?</h1>
-  
-<p>Ремень ГРМ (газораспределительный механизм) — одна из важнейших деталей двигателя. Если он рвётся на ходу, клапаны встречаются с поршнями, и двигатель нуждается в <strong>капитальном ремонте стоимостью от 800 до 2000 USD</strong>.</p>
-<h2>Когда менять?</h2>
-<ul>
-<li><strong>По пробегу:</strong> обычно каждые 60 000–90 000 км (зависит от марки)</li>
-<li><strong>По времени:</strong> раз в 4–5 лет, даже если пробег небольшой — резина стареет</li>
-<li><strong>При первых симптомах:</strong> не ждать предельного пробега</li>
-</ul>
-<div class="callout"><p>⚠️ <strong>Важно:</strong> при замене ремня ГРМ обязательно меняйте ролики и помпу охлаждения — они стоят недорого, но если выйдут из строя, ремень снова порвётся.</p></div>
-<h2>Признаки износа</h2>
-<ul>
-<li>Трескается или расслаивается видимая часть ремня</li>
-<li>Посторонний свист из-под капота</li>
-<li>Двигатель троит или не заводится</li>
-<li>Вы не помните, когда меняли</li>
-</ul>
-<h2>Сколько стоит замена в Кишинёве?</h2>
-<p>В Black Auto Service замена ремня ГРМ вместе с роликами и помпой обходится значительно дешевле, чем у официальных дилеров. Цена зависит от марки и модели автомобиля. Позвоните нам по номеру <strong>068 078 078</strong> — назовём точную стоимость за 2 минуты.</p>
-  <div class="cta-box">
-    <h3>Нужна помощь с вашим авто?</h3>
-    <p>Запишитесь на диагностику или ремонт в Black Auto Service — честные цены, гарантия на работы.</p>
-    <a href="../index.html#map" class="btn-cta">Записаться на ремонт</a>
-    &nbsp;&nbsp;
-    <a href="tel:+37368078078" class="btn-cta" style="background:transparent;border:1px solid var(--red)">☎ 068 078 078</a>
+  <h1><span data-ru>Когда нужно менять ремень ГРМ?</span><span data-ro>Când trebuie schimbat cureaua de distribuţie?</span></h1>
+  <p data-ru>Ремень ГРМ — одна из самых важных частей двигателя. Если он рвётся, клапаны могут столкнуться с поршнями, и ремонт превращается в дорогостоящий капремонт.</p>
+  <p data-ro>Cureaua de distribuţie este una dintre cele mai importante părţi ale motorului. Dacă se rupe, supapele pot lovi pistoanele, iar reparaţia devine costisitoare.</p>
+  <h2 data-ru>Когда менять ремень?</h2>
+  <h2 data-ro>Când să schimbi cureaua?</h2>
+  <ul>
+    <li data-ru>По пробегу: обычно каждые 60 000–90 000 км</li>
+    <li data-ro>După kilometraj: de obicei la 60 000–90 000 km</li>
+    <li data-ru>По времени: раз в 4–5 лет, даже если пробег небольшой</li>
+    <li data-ro>După timp: la 4–5 ani, chiar dacă ai parcurs puţini kilometri</li>
+    <li data-ru>При первых симптомах: свист, вибрация или нестабильная работа двигателя</li>
+    <li data-ro>La primele semne: fluierat, vibraţii sau mers instabil al motorului</li>
+  </ul>
+  <div class="callout">
+    <p data-ru>⚠️ Важно: вместе с ремнём ГРМ заменяйте ролики и помпу охлаждения. Если они изношены, цепь тоже может порваться снова.</p>
+    <p data-ro>⚠️ Important: schimbă împreună cu cureaua şi rolele şi pompa de apă. Dacă sunt uzate, cureaua se poate rupe din nou.</p>
   </div>
-  <div style="border-top:1px solid var(--bdr);padding-top:28px;margin-top:16px">
-    <p style="font-size:13px;color:var(--gray2)">Читайте также: 
-      <a href="../blog.html" style="color:var(--red)">Все статьи блога →</a>
+  <h2 data-ru>Признаки износа</h2>
+  <h2 data-ro>Semne ale uzurii</h2>
+  <ul>
+    <li data-ru>Трескается видимая часть ремня</li>
+    <li data-ro>Se crăpa partea vizibilă a curelei</li>
+    <li data-ru>Появился свист из-под капота</li>
+    <li data-ro>A apărut un fluierat sub capotă</li>
+    <li data-ru>Двигатель троит или плохо заводится</li>
+    <li data-ro>Motorul ratează sau porneşte greu</li>
+    <li data-ru>Вы не помните, когда последний раз меняли ремень</li>
+    <li data-ro>Nu-ţi aminteşti când ai schimbat ultima dată cureaua</li>
+  </ul>
+  <p data-ru>В Black Auto Service замена ремня ГРМ выполняется с полным контролем состояния двигателя и рекомендациями по дальнейшему обслуживанию.</p>
+  <p data-ro>La Black Auto Service schimbarea curelei de distribuţie se face cu verificarea completă a motorului şi recomandări pentru întreţinere ulterioară.</p>
+  <div class="cta-box">
+    <h3><span data-ru>Нужна помощь с вашим авто?</span><span data-ro>Ai nevoie de ajutor pentru maşina ta?</span></h3>
+    <p data-ru>Запишитесь на диагностику или ремонт в Black Auto Service — честные цены, гарантия на работы.</p>
+    <p data-ro>Programează diagnosticarea sau reparaţia la Black Auto Service — preţ corect, garanţie pentru lucrări.</p>
+    <a href="../index.html#map" class="btn-cta"><span data-ru>Записаться на ремонт</span><span data-ro>Programează o reparaţie</span></a>
+    &nbsp;&nbsp;
+    <a href="tel:+37368078078" class="btn-cta btn-outline">☎ 068 078 078</a>
+  </div>
+  <div class="footer-section">
+    <p class="footer-read"><span data-ru>Читайте также:</span><span data-ro>Citeşte şi:</span>
+      <a href="../blog.html" class="read-more"><span data-ru>Все статьи блога →</span><span data-ro>Toate articolele →</span></a>
     </p>
   </div>
 </article>
 <footer>
   <div class="con">
-    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center">
-      <div>
-        <div style="font-family:var(--fh);font-size:20px;letter-spacing:.06em">BLACK <span style="color:var(--red)">AUTO</span>SERVICE</div>
-        <div style="font-size:12px;color:var(--gray2);margin-top:6px">© 2025 · str. Varnița 2/3, Chișinău · 068 078 078</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div>BLACK <span>AUTO</span>SERVICE</div>
+        <div class="footer-copy">© 2025 · str. Varnița 2/3, Chișinău · 068 078 078</div>
       </div>
-      <div style="display:flex;gap:20px;flex-wrap:wrap">
-        <a href="index.html" style="font-size:13px;color:var(--gray2)">Главная</a>
-        <a href="blog.html" style="font-size:13px;color:var(--gray2)">Блог</a>
-        <a href="privacy.html" style="font-size:13px;color:var(--gray2)">Конфиденциальность</a>
-        <a href="cookies.html" style="font-size:13px;color:var(--gray2)">Cookie</a>
-        <a href="index.html#map" style="font-size:13px;color:var(--gray2)">Контакты</a>
+      <div class="footer-nav">
+        <a href="index.html" class="footer-link">Главная</a>
+        <a href="blog.html" class="footer-link">Блог</a>
+        <a href="privacy.html" class="footer-link">Конфиденциальность</a>
+        <a href="cookies.html" class="footer-link">Cookie</a>
+        <a href="index.html#map" class="footer-link">Контакты</a>
       </div>
     </div>
   </div>
 </footer>
+<script src="../lang.js"></script>
 </body>
 </html>

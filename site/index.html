@@ -743,6 +743,7 @@ function resetTW(){clearTimeout(timer);chi=0;del=false;const el=document.getElem
 function setLang(l){
   const r=l==='ro';
   document.body.classList.toggle('ro',r);
+  localStorage.setItem('blackautoservice_lang', r ? 'ro' : 'ru');
   document.querySelectorAll('.lb button').forEach((b,i)=>b.classList.toggle('on',i===(r?1:0)));
   const ta=document.getElementById('ta');if(ta)ta.placeholder=r?'Descrieți problema sau întrebarea...':'Опишите проблему или вопрос...';
   resetTW();
@@ -752,7 +753,8 @@ function cls(){document.getElementById('mm').classList.remove('open')}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function fs(e){e.preventDefault();const b=document.getElementById('sb');const r=document.body.classList.contains('ro');b.innerHTML=`<i class="fas fa-check"></i> ${r?'Cerere trimisă! ✓':'Заявка отправлена! ✓'}`;b.style.background='#15803d';setTimeout(()=>{b.innerHTML=`<i class="fas fa-paper-plane"></i><span data-ru>Отправить заявку</span><span data-ro>Trimite cererea</span>`;b.style.background='';setLang(r?'ro':'ru')},3500)}
-setLang('ru');
+const savedLang = localStorage.getItem('blackautoservice_lang');
+setLang(savedLang === 'ro' ? 'ro' : 'ru');
 
 // ── ANIMATED COUNTER ──
 function animateCounter(el, target, duration=1800) {
