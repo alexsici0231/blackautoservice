@@ -186,6 +186,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 /* MAP / CONTACTS */
 .ms{background:var(--bg2)}
 .contact-top{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
+.mg{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
 .ci-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;padding:24px 20px;display:flex;flex-direction:column;gap:8px;transition:border-color var(--t)}
 .ci-card:hover{border-color:var(--red)}
 .ci-card .cio{width:40px;height:40px;border-radius:10px;background:rgba(200,16,46,.1);border:1px solid rgba(200,16,46,.2);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
@@ -199,8 +200,20 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 .contact-bottom{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .mw{border-radius:14px;overflow:hidden;border:1px solid var(--bdr)}
 .mw iframe{width:100%;height:380px;display:block;border:0}
-.db{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--bg3);border:1px solid var(--bdr);color:var(--white);padding:11px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:var(--t)}.db:hover{border-color:var(--red);color:var(--red)}
+.db{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--bg3);border:1px solid var(--bdr);color:var(--white);padding:11px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:var(--t),transform .2s ease;transform:translateZ(0);cursor:pointer;animation:pbtn 2s infinite}
+.db:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
 .tp{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;transition:var(--t);margin-bottom:20px}.tp:hover{border-color:var(--white)}
+.phone-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;transition:var(--t);margin-bottom:20px;color:var(--white);background:var(--bg3)}
+.phone-btn:hover{border-color:var(--white);color:var(--red)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;margin-bottom:20px}
+.cph{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;color:var(--white);font-size:22px;font-weight:700;padding:18px 24px;margin-top:28px;transition:var(--t);text-decoration:none}
+.cph:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+.cd{margin-top:24px;display:flex;flex-direction:column;gap:18px}
+.cdi{display:flex;align-items:center;gap:14px}
+.cio{width:42px;height:42px;border-radius:12px;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:16px}
+.ct{display:flex;flex-direction:column;gap:4px}
+.ct strong{font-size:13px;color:var(--white)}
+.ct span{font-size:13px;color:var(--gray);line-height:1.5}
 @media(max-width:900px){.contact-top{grid-template-columns:repeat(2,1fr)}.contact-bottom{grid-template-columns:1fr}}
 @media(max-width:500px){.contact-top{grid-template-columns:1fr}}
 
@@ -237,7 +250,7 @@ body.ro [data-ro]{display:block}
 /* RESPONSIVE */
 @media(max-width:1100px){.sg{grid-template-columns:repeat(3,1fr)}.wg{grid-template-columns:repeat(2,1fr)}.hs2{grid-template-columns:repeat(2,1fr)}.hs2::before{display:none}}
 @media(max-width:900px){.nl{display:none}.bb{display:flex}.mg{grid-template-columns:1fr}.mw iframe{height:300px}.sg{grid-template-columns:repeat(2,1fr)}.wg{grid-template-columns:repeat(2,1fr)}.gs{flex-direction:column;height:auto}.gi{height:220px}}
-@media(max-width:600px){section{padding:60px 0}.sg{grid-template-columns:1fr}.wg{grid-template-columns:1fr}.hs2{grid-template-columns:1fr}.fr{grid-template-columns:1fr}.hero h1{font-size:50px}.gs{height:auto;flex-direction:column}.gi{height:220px}.gl-l{opacity:1;font-size:13px}.cph{font-size:36px}.nc{display:none}.ph{display:flex}body{padding-bottom:58px}}
+@media(max-width:600px){section{padding:60px 0}.sg{grid-template-columns:1fr}.wg{grid-template-columns:1fr}.hs2{grid-template-columns:1fr}.fr{grid-template-columns:1fr}.hero h1{font-size:50px}.gs{height:auto;flex-direction:column}.gi{height:220px}.gl-l{opacity:1;font-size:13px}.cph{font-size:22px}.nc{display:none}.ph{display:flex}body{padding-bottom:58px}}
 @media(max-width:400px){.nb{font-size:15px}.hero h1{font-size:40px}}
 
 /* Extracted inline styles */
@@ -502,7 +515,7 @@ body.ro [data-ro]{display:block}
       <div class="stat-lbl"><span data-ru>Марок автомобилей</span><span data-ro>Mărci auto deservite</span></div>
     </div>
     <div class="stat-item">
-      <div class="stat-icon"><span class="icon-flex-24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div>
+      <div class="stat-icon"><span class="icon-inline-18"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 12L8 8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M7.5 7.5l2.5 2.5M16.5 7.5L14 10M18 12h-2M8 12H6M17 17l-2-2"/></svg></span></div>
       <div class="stat-num"><span class="cnt" data-target="15">0</span><span class="suf" data-ru> мин</span><span class="suf" data-ro> min</span></div>
       <div class="stat-lbl" data-ru>Диагностика авто</div><div class="stat-lbl" data-ro>Diagnosticare auto</div>
     </div>
@@ -602,14 +615,15 @@ body.ro [data-ro]{display:block}
 
       <div class="rv d2">
         <div class="sl"><span data-ru>Связаться с нами</span><span data-ro>Contactați-ne</span></div>
-        <a href="tel:+37368078078" class="cph">+37368078078</a>
         <div class="cd">
           <div class="cdi"><div class="cio"><i class="fas fa-map-marker-alt"></i></div><div class="ct"><strong><span data-ru>Адрес</span><span data-ro>Adresă</span></strong><span>str. Varnița 2/3, Chișinău, Moldova</span></div></div>
           <div class="cdi"><div class="cio"><span class="icon-inline-28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div><div class="ct"><strong><span data-ru>Режим работы</span><span data-ro>Program</span></strong><span><span data-ru>Пн–Пт: 08:00–19:00 · Сб: 09:00–16:00 · Вс: выходной</span><span data-ro>Luni–Vineri: 08:00–19:00 · Sâmbătă: 09:00–16:00 · Duminică: liber</span></span></div></div>
-          <div class="cdi"><div class="cio"><span class="icon-inline-14"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span></div><div class="ct"><strong>TikTok</strong><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></div></div>
           <div class="cdi"><div class="cio"><i class="fas fa-comment-dots"></i></div><div class="ct"><strong><span data-ru>Запись в DM</span><span data-ro>Programări DM</span></strong><span><span data-ru>Пишите в TikTok — ответим быстро</span><span data-ro>Scrieți în TikTok — răspundem rapid</span></span></div></div>
         </div>
-        <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener" class="tp"><span class="icon-inline-14"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><span data-ru>Наши работы в TikTok</span><span data-ro>Lucrările noastre pe TikTok</span><i class="fas fa-arrow-up-right-from-square icon-external"></i></a>
+        <div class="contact-actions">
+          <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener" class="tp"><span class="icon-inline-14"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><span data-ru>Наши работы в TikTok</span><span data-ro>Lucrările noastre pe TikTok</span><i class="fas fa-arrow-up-right-from-square icon-external"></i></a>
+          <a href="tel:+37368078078" class="phone-btn"><i class="fas fa-phone"></i><span>+37368078078</span></a>
+        </div>
 
         <div class="fb2">
           <h3 data-ru>Оставить заявку</h3><h3 data-ro>Trimiteți o cerere</h3>
