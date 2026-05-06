@@ -55,10 +55,11 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
 .card-footer{display:flex;justify-content:space-between;align-items:center}
 
 .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
-.footer-brand{font-family:var(--fh);font-size:20px;letter-spacing:.06em}
-.footer-brand span{color:var(--red)}
-.footer-copy{font-size:12px;color:var(--gray2);margin-top:6px}
-.footer-nav{display:flex;gap:20px;flex-wrap:wrap}
+.fbn{font-family:var(--fh);font-size:20px;letter-spacing:.06em}
+.fbn span{color:var(--red)}
+.fc{font-size:12px;color:var(--gray2);margin-top:6px}
+.footer-desc{margin-top:3px}
+.fl{display:flex;gap:20px;flex-wrap:wrap}
 .footer-link{font-size:13px;color:var(--gray2)}
 </style>
 <style>
@@ -77,7 +78,6 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
     <a href="index.html#map">Контакты / Contacte</a>
   </div>
   <div class="nr">
-    <a href="tel:+37368078078" class="nc">📞 068 078 078</a>
     <button class="bb" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -240,11 +240,12 @@ footer{border-top:1px solid var(--bdr);background:var(--bg2);padding:36px 0;marg
 <footer>
   <div class="con">
     <div class="footer-top">
-      <div class="footer-brand">
-        <div>BLACK <span>AUTO</span>SERVICE</div>
-        <div class="footer-copy">© 2025 · str. Varnița 2/3, Chișinău · 068 078 078</div>
+      <div>
+        <div class="fbn">BLACK <span>AUTO</span>SERVICE</div>
+        <div class="fc">© 2025 Black Auto Service · str. Varnița 2/3, Chișinău</div>
+        <div class="fc footer-desc">Ремонт кузова, покраска авто, жестяные работы в Кишинёве</div>
       </div>
-      <div class="footer-nav">
+      <div class="fl">
         <a href="index.html" class="footer-link">Главная</a>
         <a href="blog.html" class="footer-link">Блог</a>
         <a href="privacy.html" class="footer-link">Конфиденциальность</a>
