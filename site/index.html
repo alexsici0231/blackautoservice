@@ -203,17 +203,23 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 .db{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--bg3);border:1px solid var(--bdr);color:var(--white);padding:11px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:var(--t),transform .2s ease;transform:translateZ(0);cursor:pointer;animation:pbtn 2s infinite}
 .db:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
 .tp{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;transition:var(--t);margin-bottom:20px}.tp:hover{border-color:var(--white)}
-.phone-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;transition:var(--t);margin-bottom:20px;color:var(--white);background:var(--bg3)}
+.phone-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:14px 22px;font-size:14px;font-weight:600;transition:var(--t);margin-bottom:20px;color:var(--white);background:var(--bg3);min-width:240px}
+.phone-btn i{color:var(--red);font-size:16px}
 .phone-btn:hover{border-color:var(--white);color:var(--red)}
-.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;margin-bottom:20px}
-.cph{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--bg3);border:1px solid var(--bdr);border-radius:12px;color:var(--white);font-size:22px;font-weight:700;padding:18px 24px;margin-top:28px;transition:var(--t);text-decoration:none}
-.cph:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
-.cd{margin-top:24px;display:flex;flex-direction:column;gap:18px}
-.cdi{display:flex;align-items:center;gap:14px}
-.cio{width:42px;height:42px;border-radius:12px;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red);font-size:16px}
-.ct{display:flex;flex-direction:column;gap:4px}
-.ct strong{font-size:13px;color:var(--white)}
-.ct span{font-size:13px;color:var(--gray);line-height:1.5}
+.phone-btn:hover i{color:var(--red2)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;margin-bottom:20px}
+.icon-inline-14 svg,.icon-inline-28 svg,.cio svg{display:block;width:100%;height:100%}
+.footer-grid{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:32px;padding:48px 0 24px}
+.footer-col{display:flex;flex-direction:column;gap:14px}
+.footer-heading{font-family:var(--fh);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.footer-col a{font-size:13px;color:var(--gray);transition:color var(--t)}
+.footer-col a:hover{color:var(--white)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:12px}
+.footer-contact-item i{margin-top:3px;color:var(--red);font-size:16px}
+.footer-contact-item span{font-size:13px;color:var(--gray);line-height:1.6}
+.footer-bottom{border-top:1px solid var(--bdr);padding-top:24px;margin-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--gray2)}
+@media(max-width:900px){.footer-grid{grid-template-columns:repeat(2,minmax(180px,1fr))}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start}}
 @media(max-width:900px){.contact-top{grid-template-columns:repeat(2,1fr)}.contact-bottom{grid-template-columns:1fr}}
 @media(max-width:500px){.contact-top{grid-template-columns:1fr}}
 
@@ -716,22 +722,40 @@ body.ro [data-ro]{display:block}
 <!-- FOOTER -->
 <footer>
   <div class="con">
-    <div class="fi">
-      <div>
+    <div class="footer-grid">
+      <div class="footer-col">
         <div class="fbn">BLACK <span>AUTO</span>SERVICE</div>
-        <div class="fc">© 2025 Black Auto Service · str. Varnița 2/3, Chișinău · ☎ +37368078078</div>
+        <div class="fc">© 2025 Black Auto Service</div>
         <div class="fc footer-desc"><span data-ru>Ремонт кузова, покраска авто, жестяные работы в Кишинёве</span><span data-ro>Vopsire auto, tinichigerie, reparație caroserie în Chișinău</span></div>
       </div>
-      <div class="fl">
+      <div class="footer-col">
+        <div class="footer-heading" data-ru>Навигация</div>
         <a href="#services"><span data-ru>Услуги</span><span data-ro>Servicii</span></a>
         <a href="#why"><span data-ru>О нас</span><span data-ro>Despre noi</span></a>
         <a href="#map"><span data-ru>Контакты</span><span data-ro>Contacte</span></a>
-        <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">TikTok</a>
-        <a href="tel:+37368078078">+37368078078</a>
         <a href="blog.html"><span data-ru>Блог</span><span data-ro>Blog</span></a>
         <a href="privacy.html"><span data-ru>Конфиденциальность</span><span data-ro>Confidențialitate</span></a>
         <a href="cookies.html">Cookie</a>
       </div>
+      <div class="footer-col">
+        <div class="footer-heading" data-ru>Услуги</div>
+        <a href="#services"><span data-ru>Покраска &amp; Кузов</span><span data-ro>Vopsire &amp; Caroserie</span></a>
+        <a href="#services"><span data-ru>Жестянка &amp; Рихтовка</span><span data-ro>Tinichigerie &amp; Îndreptare</span></a>
+        <a href="#services"><span data-ru>Диагностика Авто</span><span data-ro>Diagnosticare Auto</span></a>
+        <a href="#services"><span data-ru>Кондиционер</span><span data-ro>AC</span></a>
+        <a href="#services"><span data-ru>Замена Масла &amp; Фильтров</span><span data-ro>Schimbare Ulei &amp; Filtre</span></a>
+        <a href="#services"><span data-ru>Общее Обслуживание</span><span data-ro>Service Complet</span></a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading" data-ru>Контакты</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>str. Varnița 2/3, Chișinău</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+37368078078">+37368078078</a></span></div>
+        <div class="footer-contact-item"><i class="fab fa-tiktok"></i><span><a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener">@blackautoservice.md</a></span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Black Auto Service. Все права защищены.</div>
+      <div>Chișinău, Moldova</div>
     </div>
   </div>
 </footer>
