@@ -140,7 +140,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 .ii{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--gray)}.ii i{color:var(--red);font-size:14px}.ii strong{color:var(--white)}
 
 /* SERVICES */
-.sv{background:var(--bg2)}
+.sv{background:var(--bg);margin-top:-12px}
 .sg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;background:var(--bdr);gap:1px}
 .sc{background:var(--bg3);padding:28px 24px;position:relative;overflow:hidden;transition:background var(--t)}
 .sc::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:.25s}
@@ -475,6 +475,7 @@ body.ro [data-ro]{display:block}
   <a href="#why" onclick="cls()"><span data-ru>О нас</span><span data-ro>Despre noi</span></a>
   <a href="#how" onclick="cls()"><span data-ru>Как работаем</span><span data-ro>Cum lucrăm</span></a>
   <a href="#map" onclick="cls()"><span data-ru>Контакты</span><span data-ro>Contacte</span></a>
+  <a href="blog.html" onclick="cls()"><span data-ru>Блог</span><span data-ro>Blog</span></a>
   <a href="tel:+37368078078" class="btn br btn-mobile"><i class="fas fa-phone"></i> +37368078078</a>
 </div>
 
@@ -598,7 +599,7 @@ body.ro [data-ro]{display:block}
 </div>
 
 <!-- SERVICES -->
-<section class="sv" id="services" style="margin-top:-12px">
+<section class="sv" id="services">
   <div class="con">
     <div class="sl"><span data-ru>Наши услуги</span><span data-ro>Serviciile noastre</span></div>
     <h2 class="st"><span data-ru>Что мы делаем</span><span data-ro>Ce facem</span></h2>
@@ -694,8 +695,8 @@ body.ro [data-ro]{display:block}
           <h3 data-ru>Оставить заявку</h3><h3 data-ro>Trimiteți o cerere</h3>
           <form onsubmit="fs(event)">
             <div class="fr">
-              <div class="fg"><label data-ru>Имя</label><label data-ro>Nume</label><input type="text" required placeholder="Ion"></div>
-              <div class="fg"><label data-ru>Телефон</label><label data-ro>Telefon</label><input type="tel" required placeholder="068 ..."></div>
+              <div class="fg"><label><span data-ru>Имя</span><span data-ro>Nume</span></label><input type="text" required placeholder="Ion"></div>
+              <div class="fg"><label><span data-ru>Телефон</span><span data-ro>Telefon</span></label><input type="tel" required placeholder="068 ..."></div>
             </div>
             <div class="fg">
               <label data-ru for="service">Услуга</label><label data-ro for="service">Serviciul</label>
