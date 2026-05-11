@@ -63,7 +63,7 @@ section{padding:96px 0}
 .hero{position:relative;min-height:100vh;padding-top:var(--nh);display:flex;align-items:center;overflow:hidden}
 .hi{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;filter:brightness(.4)}
 .ho{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.99) 0%,rgba(8,8,8,.9) 45%,rgba(8,8,8,.55) 70%,rgba(8,8,8,.1) 100%)}
-.hero-wrap{position:relative;width:100%;padding:80px 5% 60px}
+.hero-wrap{position:relative;width:100%;padding:12px 5% 60px}
 .hc{max-width:640px}
 
 
@@ -194,6 +194,13 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 .ci-card strong{font-size:14px;font-weight:700;color:var(--white)}
 .ci-card span,.ci-card a{font-size:13px;color:var(--gray);line-height:1.45}
 .ci-card a:hover{color:var(--red)}
+.cd{display:grid;gap:16px;margin-top:16px}
+.cdi{display:flex;align-items:flex-start;gap:16px}
+.cd .cio{width:44px;height:44px;border-radius:14px;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cd .cio i,.cd .cio svg{color:var(--red);width:20px;height:20px}
+.ct{display:flex;flex-direction:column;gap:6px}
+.ct strong{font-size:15px;font-weight:700;color:var(--white);display:block}
+.ct span{font-size:14px;color:var(--gray);line-height:1.6}
 .contact-phone-hero{font-family:var(--fh);font-size:clamp(32px,4vw,52px);color:var(--white);letter-spacing:.02em;display:flex;align-items:center;gap:16px;margin-bottom:32px}
 .contact-phone-hero a{color:var(--white);transition:color var(--t)}.contact-phone-hero a:hover{color:var(--red)}
 .contact-phone-hero .ph-badge{background:var(--red);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;white-space:nowrap;animation:pbtn 2s infinite}
@@ -204,6 +211,12 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:200;height:var(--nh);backgrou
 .db:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
 .tp{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;transition:var(--t);margin-bottom:20px}.tp:hover{border-color:var(--white)}
 .phone-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--bdr);border-radius:8px;padding:14px 22px;font-size:14px;font-weight:600;transition:var(--t);margin-bottom:20px;color:var(--white);background:var(--bg3)}
+.brands-section{padding:32px 0 8px;background:rgba(255,255,255,.03)}
+.brands-marquee{overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px 0;background:rgba(255,255,255,.02)}
+.brands-track{display:flex;align-items:center;gap:32px;animation:scroll-logos 14s linear infinite}
+.brands-track img{width:84px;height:auto;opacity:.78;filter:grayscale(1);transition:opacity .3s,filter .3s,transform .3s}
+.brands-track img:hover{opacity:1;filter:none;transform:scale(1.05)}
+@keyframes scroll-logos{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .phone-btn i{color:var(--red);font-size:16px}
 .phone-btn:hover{border-color:var(--white);color:var(--red)}
 .phone-btn:hover i{color:var(--red2)}
@@ -538,8 +551,53 @@ body.ro [data-ro]{display:block}
   </div>
 </div>
 
+<!-- BRANDS MARQUEE -->
+<div class="brands-section">
+  <div class="con">
+    <div class="sl"><span data-ru>Мы обслуживаем все марки автомобилей</span><span data-ro>Servim toate mărcile de automobile</span></div>
+    <div class="brands-marquee" aria-label="Car brands logos">
+      <div class="brands-track">
+        <img src="../photos/svg/imgi_18_volkswagen.svg" alt="Volkswagen">
+        <img src="../photos/svg/imgi_19_audi.svg" alt="Audi">
+        <img src="../photos/svg/imgi_20_bmw.svg" alt="BMW">
+        <img src="../photos/svg/imgi_21_mercedes-benz.svg" alt="Mercedes-Benz">
+        <img src="../photos/svg/imgi_22_skoda.svg" alt="Skoda">
+        <img src="../photos/svg/imgi_23_porsche.svg" alt="Porsche">
+        <img src="../photos/svg/imgi_24_ford.svg" alt="Ford">
+        <img src="../photos/svg/imgi_25_hyundai.svg" alt="Hyundai">
+        <img src="../photos/svg/imgi_26_kia.svg" alt="Kia">
+        <img src="../photos/svg/imgi_27_toyota.svg" alt="Toyota">
+        <img src="../photos/svg/imgi_28_subaru.svg" alt="Subaru">
+        <img src="../photos/svg/imgi_29_volvo.svg" alt="Volvo">
+        <img src="../photos/svg/imgi_30_land-rover.svg" alt="Land Rover">
+        <img src="../photos/svg/imgi_31_jaguar.svg" alt="Jaguar">
+        <img src="../photos/svg/imgi_32_seat.svg" alt="SEAT">
+        <img src="../photos/svg/imgi_33_renault.svg" alt="Renault">
+        <img src="../photos/svg/imgi_34_peugeot.svg" alt="Peugeot">
+        <img src="../photos/svg/imgi_35_opel.svg" alt="Opel">
+        <img src="../photos/svg/imgi_36_mazda.svg" alt="Mazda">
+        <img src="../photos/svg/imgi_37_mitsubishi.svg" alt="Mitsubishi">
+        <img src="../photos/svg/imgi_38_nissan.svg" alt="Nissan">
+        <img src="../photos/svg/imgi_39_honda.svg" alt="Honda">
+        <img src="../photos/svg/imgi_40_geely.svg" alt="Geely">
+        <img src="../photos/svg/imgi_41_haval.svg" alt="Haval">
+        <img src="../photos/svg/imgi_18_volkswagen.svg" alt="Volkswagen">
+        <img src="../photos/svg/imgi_19_audi.svg" alt="Audi">
+        <img src="../photos/svg/imgi_20_bmw.svg" alt="BMW">
+        <img src="../photos/svg/imgi_21_mercedes-benz.svg" alt="Mercedes-Benz">
+        <img src="../photos/svg/imgi_22_skoda.svg" alt="Skoda">
+        <img src="../photos/svg/imgi_23_porsche.svg" alt="Porsche">
+        <img src="../photos/svg/imgi_24_ford.svg" alt="Ford">
+        <img src="../photos/svg/imgi_25_hyundai.svg" alt="Hyundai">
+        <img src="../photos/svg/imgi_26_kia.svg" alt="Kia">
+        <img src="../photos/svg/imgi_27_toyota.svg" alt="Toyota">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- SERVICES -->
-<section class="sv" id="services">
+<section class="sv" id="services" style="margin-top:-12px">
   <div class="con">
     <div class="sl"><span data-ru>Наши услуги</span><span data-ro>Serviciile noastre</span></div>
     <h2 class="st"><span data-ru>Что мы делаем</span><span data-ro>Ce facem</span></h2>
@@ -622,9 +680,9 @@ body.ro [data-ro]{display:block}
       <div class="rv d2">
         <div class="sl"><span data-ru>Связаться с нами</span><span data-ro>Contactați-ne</span></div>
         <div class="cd">
-          <div class="cdi"><div class="cio"><i class="fas fa-map-marker-alt"></i></div><div class="ct"><strong><span data-ru>Адрес</span><span data-ro>Adresă</span></strong><span>str. Varnița 2/3, Chișinău, Moldova</span></div></div>
-          <div class="cdi"><div class="cio"><span class="icon-inline-28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div><div class="ct"><strong><span data-ru>Режим работы</span><span data-ro>Program</span></strong><span><span data-ru>Пн–Пт: 08:00–19:00 · Сб: 09:00–16:00 · Вс: выходной</span><span data-ro>Luni–Vineri: 08:00–19:00 · Sâmbătă: 09:00–16:00 · Duminică: liber</span></span></div></div>
-          <div class="cdi"><div class="cio"><i class="fas fa-comment-dots"></i></div><div class="ct"><strong><span data-ru>Запись в DM</span><span data-ro>Programări DM</span></strong><span><span data-ru>Пишите в TikTok — ответим быстро</span><span data-ro>Scrieți în TikTok — răspundem rapid</span></span></div></div>
+          <div class="cdi"><div class="cio"><i class="fas fa-map-marker-alt"></i></div><div class="ct"><strong><span data-ru>Адрес</span><span data-ro>Adresă</span></strong> <span>str. Varnița 2/3, Chișinău, Moldova</span></div></div>
+          <div class="cdi"><div class="cio"><span class="icon-inline-28"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span></div><div class="ct"><strong><span data-ru>Режим работы</span><span data-ro>Program</span></strong> <span><span data-ru>Пн–Пт: 08:00–19:00 · Сб: 09:00–16:00 · Вс: выходной</span><span data-ro>Luni–Vineri: 08:00–19:00 · Sâmbătă: 09:00–16:00 · Duminică: liber</span></span></div></div>
+          <div class="cdi"><div class="cio"><i class="fas fa-comment-dots"></i></div><div class="ct"><strong><span data-ru>Запись в DM</span><span data-ro>Programări DM</span></strong> <span><span data-ru>Пишите в TikTok — ответим быстро</span><span data-ro>Scrieți în TikTok — răspundem rapid</span></span></div></div>
         </div>
         <div class="contact-actions">
           <a href="https://www.tiktok.com/@blackautoservice.md" target="_blank" rel="noopener" class="tp"><span class="icon-inline-14"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.83a8.18 8.18 0 004.79 1.54V6.92a4.84 4.84 0 01-1.02-.23z"/></svg></span><span data-ru>Наши работы в TikTok</span><span data-ro>Lucrările noastre pe TikTok</span><i class="fas fa-arrow-up-right-from-square icon-external"></i></a>
